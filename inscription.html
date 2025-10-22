@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+     <nav>
+      <div class="Onglet">
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="login.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="play.html">Jouer</a>
+      </div>
+    </nav>
+    <h1>Inscrivez-vous</h1>
+    <form action="/memory-game/" method="post">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required placeholder="3 caractères minimum"><br>
+
+        <label for="email">Entrez votre email :</label>
+        <input type="email" id="email" name="email" required placeholder="Votre email"><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required placeholder="Votre mot de passe"><br>
+        <h3>Au moins un symbole, un chiffre, ainsi que 6 caractères minimum</h3><br>
+
+        <label for="password">Confirmez votre mot de passe :</label>
+        <input type="password" id="password" name="password" required placeholder="Confirmez le mot de passe"><br>
+
+        <button type="submit">Création du compte</button>
+        <button type="button">Annuler</button>
+      <style>
+        form {
+          display: center;
+          flex-direction: column;
+          max-width: 300px;
+        }
+        button {
+          margin-bottom: 10px;
+          align-items: center;
+          background-color: white;
+          color: black;
+          border: 2px solid black;
+          padding: 10px 24px;
+        }
+        label {
+          font-size: 14px;
+          color: white;
+        }
+        h3 {
+          font-size: 12px;
+          color: grey;
+        }
+
+      </style>
+    </form>
+    >
+</body>
+</html>

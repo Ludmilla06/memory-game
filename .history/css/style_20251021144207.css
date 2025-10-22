@@ -40,9 +40,7 @@ game-container {
   margin: 10px;
   width: 200px;
   height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
+  display: inline-block;
   text-align: center;
   background-color: black;
 }

@@ -1,0 +1,144 @@
+/* ===== STYLES POUR LE JEU MEMORY ===== */
+
+/* Container principal du jeu */
+.game-container {
+  max-width: 800px;
+  margin: 80px auto 20px auto; /* Marge en haut pour la navbar */
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Grille de cartes - 4 colonnes x 3 lignes */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  grid-template-rows: repeat(3, 1fr);    /* 3 lignes égales */
+  gap: 15px; /* Espacement entre les cartes */
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Style de chaque carte */
+.card {
+  aspect-ratio: 1; /* Carte carrée */
+  perspective: 1000px; /* Pour l'effet 3D */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Container interne de la carte pour l'effet de retournement */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Face avant de la carte (question mark) */
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+}
+
+/* Face arrière de la carte (image) */
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  transform: rotateY(180deg);
+}
+
+/* Images dans les cartes */
+.card img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* État retourné de la carte */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* État trouvé (paire correcte) */
+.card.found {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.card.found .card-front,
+.card.found .card-back {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-color: #00ff00;
+}
+
+/* Bouton de reset */
+#reset-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .memory-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur mobile */
+    grid-template-rows: repeat(4, 1fr);    /* 4 lignes sur mobile */
+    gap: 10px;
+    max-width: 400px;
+  }
+  
+  .game-container {
+    margin: 60px 10px 20px 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur très petit écran */
+    grid-template-rows: repeat(6, 1fr);   /* 6 lignes sur très petit écran */
+    gap: 8px;
+    max-width: 300px;
+  }
+}

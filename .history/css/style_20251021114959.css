@@ -32,17 +32,3 @@ h2 {
   text-align: left;
   font-size: 24px;
 }
-
-game-container {
-  border: 2px solid white;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
-  text-align: center;
-  background-color: black;
-}

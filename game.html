@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="Onglet">
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="login.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="play.html">Jouer</a>
+      </div>
+    </nav>
+    <h1>Memory game</h1>
+     <!-- Zone d'informations de jeu -->
+    <div class="stats">
+      <div id="move-count">Coups : 0</div>
+      <div id="timer">Temps : 0 sec</div>
+    </div>
+
+    <div id="game">
+      <section class="grid"></section>
+    </div>
+
+    <button id="reset-btn">Nouvelle Partie</button>
+    <!-- Tableau des scores -->
+    <section class="leaderboard">
+      <h2>🏆 Top 10 des meilleurs scores</h2>
+      <ol id="score-list">
+        <!-- Les scores seront insérés ici en JavaScript -->
+      </ol>
+    </section>
+    <script type="module" src="js/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="Onglet">
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="login.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="play.html">Jouer</a>
+      </div>
+    </nav>
+
+    <div class="game-container">
+      <h1>Memory game</h1>
+
+      <div class="memory-grid" id="gameGrid">
+        <!-- Ligne 1 -->
+        <div class="card" data-id="1" data-image="11">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/11.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="2" data-image="12">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/12.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="3" data-image="15">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/15.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="4" data-image="19">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/19.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Ligne 2 -->
+        <div class="card" data-id="5" data-image="21">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/21.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="6" data-image="3">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/3.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="7" data-image="5">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/5.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="8" data-image="11">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/11.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Ligne 3 -->
+        <div class="card" data-id="9" data-image="12">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/12.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="10" data-image="15">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/15.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="11" data-image="19">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/19.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="12" data-image="21">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="assets/question.svg" alt="?" />
+            </div>
+            <div class="card-back">
+              <img src="assets/21.webp" alt="chien" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="reset-btn">Nouvelle Partie</button>
+    </div>
+
+    <script type="module" src="js/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 20px 0;
+  background: rgba(68, 67, 67, 0.644);
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin: 5px;
+  background-color: rgba(68, 67, 67, 0.644);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+}
+
+.card, 
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position : absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #fab942 url("../assets/question.svg") no-repeat center center / contain;
+}
+
+.selected {
+  border: 5px solid blue;
+  box-shadow: 0 0 10px blue;
+}
+
+.match {
+  border: 4 px solid green;
+  box-shadow: 0 0 10px green;
+  background-image: none !important; /*!important est nécessaire pour que les cartes qui correspondent perdent bien leur image de fond */
+}

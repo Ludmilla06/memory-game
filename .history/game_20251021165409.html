@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="Onglet">
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="login.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="play.html">Jouer</a>
+      </div>
+    </nav>
+
+    <div class="game-container">
+      <h1>Memory game</h1>
+
+      <div class="memory-grid" id="gameGrid">
+
+        <div class="card" data-id="1">
+          <img src="assets/BA.webp" alt="chien" />
+        </div>
+
+        <div class="card" data-id="2">
+          <img src="assets/chienasssis.webp" alt="chien" />
+        </div>
+        <div class="card" data-id="3">
+          <img src="assets/chiot.webp" alt="chien" />
+        </div>
+
+        <div class="card" data-id="4">
+          <img src="assets/labrador.webp" alt="chien" />
+        </div>
+
+        <div class="card" data-id="5">
+          <img src="assets/malinois.webp" alt="chien" />
+        </div>
+
+        <div class="card" data-id="6">
+          <img src="assets/rott.webp" alt="chien" />
+        </div>
+
+        <button id="reset-btn">Nouvelle Partie</button>
+    </div>
+
+    <script type="module" src="js/game.js"></script>
+  </body>
+</html>
